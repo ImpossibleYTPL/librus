@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 14 Gru 2021, 17:22
+-- Czas generowania: 14 Gru 2021, 18:42
 -- Wersja serwera: 10.4.22-MariaDB
 -- Wersja PHP: 7.3.33
 
@@ -32,6 +32,7 @@ CREATE TABLE `nauczyciel` (
   `login` int(10) NOT NULL,
   `alias` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `mail` text NOT NULL,
   `imie` varchar(255) DEFAULT NULL,
   `nazwisko` tinyint(1) NOT NULL,
   `wychowawca` varchar(4) NOT NULL,
@@ -75,6 +76,7 @@ CREATE TABLE `users` (
   `login` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
   `password` text NOT NULL,
+  `mail` text NOT NULL,
   `imie` varchar(255) NOT NULL,
   `nazwisko` varchar(255) NOT NULL,
   `rodzic` tinyint(1) NOT NULL,
