@@ -1,24 +1,43 @@
 #logo, #bRight {
     width: 25%;
-    height: 50px;
+    height: 100%;
     float: left;
 }
 #bCenter {
     width: 50%;
     float: left;
-    height: 50px;
+    height: 100%;
 }
 #baner{
     position: fixed;
     width: 100%;
     height: 50px;
+    background-color: lightskyblue;
+    top: 0;
 }
 #main{
     margin-top: 50px;
+    padding-top: 10%;
     width: 100%;
     clear: both;
+    text-align: center;
+    background-color: lightslategray;
 }
 #stopka {
     width: 100%;
     clear: both;
+}
+#wew {
+    width: 20%;
+    margin-left: 20%;
+    text-align: center;
+}
+input {
+    width: 100%;
+}
+#loginbtn {
+    width: 100%;
+}
+.binput {
+    text-align: left;
 }

@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Librus</title>
-    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./Styles/style.css?v=1.1">
 </head>
 <body>
+    <?php
+
+    require_once 'start.php';
+
+    ?>
     <div id="baner">
         <div id="logo">
             <img src="logo.png" alt="logo">
