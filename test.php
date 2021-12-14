@@ -1,1 +1,3 @@
-ajgagas
+<?php
+mysqli_query
+?>
