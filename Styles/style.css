@@ -1,0 +1,24 @@
+#logo, #bRight {
+    width: 25%;
+    height: 50px;
+    float: left;
+}
+#bCenter {
+    width: 50%;
+    float: left;
+    height: 50px;
+}
+#baner{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+#main{
+    margin-top: 50px;
+    width: 100%;
+    clear: both;
+}
+#stopka {
+    width: 100%;
+    clear: both;
+}
