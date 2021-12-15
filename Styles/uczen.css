@@ -22,14 +22,13 @@
     background-color: wheat;
 }
 #baner {
-    display: flex;
-    position: fixed;
     width: 100%;
+    position: fixed;
     height: 50px;
     padding-right: 20px;
     background-color: lightskyblue;
     top: 0;
-    justify-content: right;
+    text-align: right;
 }
 #logo img {
     height: 70px;
