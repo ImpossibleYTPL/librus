@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 14 Gru 2021, 18:42
--- Wersja serwera: 10.4.22-MariaDB
--- Wersja PHP: 7.3.33
+-- Czas generowania: 15 Gru 2021, 08:13
+-- Wersja serwera: 10.4.17-MariaDB
+-- Wersja PHP: 7.4.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -68,6 +68,19 @@ CREATE TABLE `oceny` (
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `ogloszenia`
+--
+
+CREATE TABLE `ogloszenia` (
+  `id` int(11) NOT NULL,
+  `tytul` text NOT NULL,
+  `tresc` text NOT NULL,
+  `nauczycielID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `users`
 --
 
@@ -79,6 +92,7 @@ CREATE TABLE `users` (
   `mail` text NOT NULL,
   `imie` varchar(255) NOT NULL,
   `nazwisko` varchar(255) NOT NULL,
+  `tel` int(255) NOT NULL,
   `rodzic` tinyint(1) NOT NULL,
   `klasa` varchar(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -108,6 +122,12 @@ ALTER TABLE `nauczyciel`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeksy dla tabeli `ogloszenia`
+--
+ALTER TABLE `ogloszenia`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeksy dla tabeli `users`
 --
 ALTER TABLE `users`
@@ -121,6 +141,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT dla tabeli `nauczyciel`
 --
 ALTER TABLE `nauczyciel`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `ogloszenia`
+--
+ALTER TABLE `ogloszenia`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
