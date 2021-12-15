@@ -16,11 +16,14 @@ if(empty($_POST['login']) || empty($_POST['pass'])){
 $login = $_POST['login'];
 $pass = $_POST['pass'];
 
-$result = $link->query("SELECT * FROM users WHERE login = '$login' AND password = '$pass'");
+$result = $link->query("SELECT * FROM users WHERE login = '$login' OR alias = '$login' AND password = '$pass'");
 if($result->num_rows == 0) {
     $_SESSION['error'] = "Nieprawidłowy login i/lub hasło";
     header("Location: main.php");
     exit();
+} else {
+    $row = $result->fetch_array();
+    $_SESSION['userID'] = $row[0];
 }
 
 
