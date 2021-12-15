@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 15 Gru 2021, 08:13
+-- Czas generowania: 15 Gru 2021, 09:33
 -- Wersja serwera: 10.4.17-MariaDB
 -- Wersja PHP: 7.4.14
 
@@ -30,7 +30,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `nauczyciel` (
   `id` int(11) NOT NULL,
   `login` int(10) NOT NULL,
-  `alias` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `mail` text NOT NULL,
   `imie` varchar(255) DEFAULT NULL,
@@ -87,7 +86,6 @@ CREATE TABLE `ogloszenia` (
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `login` varchar(255) NOT NULL,
-  `alias` varchar(255) NOT NULL,
   `password` text NOT NULL,
   `mail` text NOT NULL,
   `imie` varchar(255) NOT NULL,
@@ -96,6 +94,13 @@ CREATE TABLE `users` (
   `rodzic` tinyint(1) NOT NULL,
   `klasa` varchar(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `users`
+--
+
+INSERT INTO `users` (`id`, `login`, `password`, `mail`, `imie`, `nazwisko`, `tel`, `rodzic`, `klasa`) VALUES
+(1, 'root', '63a9f0ea7bb98050796b649e85481845', 'root@root.pl', 'root', 'root', 0, 0, 'root');
 
 -- --------------------------------------------------------
 
@@ -153,7 +158,7 @@ ALTER TABLE `ogloszenia`
 -- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
