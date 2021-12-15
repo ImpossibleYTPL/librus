@@ -25,6 +25,7 @@ if($result->num_rows == 0) {
     $row = $result->fetch_array();
     $_SESSION['userID'] = $row[0];
     header("Location: uczen.php");
+    exit();
 }
 
 
