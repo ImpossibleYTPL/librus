@@ -25,18 +25,18 @@
     </div>
     <div id="baner2">
         <div id="logo">
-            <img src="../Logo.jpg" alt="logo">
+            <img src="../Logo.png" alt="logo">
         </div>
         <div id="menu">
-            <div class="icon"><a href="#"><img src="#">Oceny</a></div>
-            <div class="icon"><a href="#"><img src="#">Frekwencja</a></div>
-            <div class="icon"><a href="#"><img src="#">Wiadomości</a></div>
-            <div class="icon"><a href="#"><img src="#">Ogłoszenia</a></div>
-            <div class="icon"><a href="#"><img src="#">Zadania domowe</a></div>
+            <div class="icon"><a href="#"><img src="#" alt="Oceny"></a></div>
+            <div class="icon"><a href="#"><img src="#" alt="Frekwencja"></a></div>
+            <div class="icon"><a href="#"><img src="#" alt="Wiadomości"></a></div>
+            <div class="icon"><a href="#"><img src="#" alt="Ogłoszenia"></a></div>
+            <div class="icon"><a href="#"><img src="#" alt="Zadania Domowe"></a></div>
         </div>
     </div>
     <div id="main">
-        
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae quas sit, dolorem cumque aliquam debitis commodi quaerat totam iste odit! Doloremque repudiandae eius reiciendis fugit neque iusto, ipsam itaque dicta?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quod quam at explicabo corrupti omnis facilis nostrum suscipit necessitatibus laborum pariatur voluptas laudantium, hic, eligendi fugiat dolorem sequi numquam blanditiis.
     </div>
     <div id="stopka">
         <hr />

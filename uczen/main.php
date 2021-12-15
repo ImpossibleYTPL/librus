@@ -15,7 +15,7 @@
     ?>
     <div id="baner">
         <div id="logo">
-            <img src="logo.png" alt="logo">
+            <img src="../logo.png" alt="logo" height="50px">
         </div>
         <div id="bCenter">
             okok
