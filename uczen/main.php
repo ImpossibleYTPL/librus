@@ -27,7 +27,7 @@
     <div id="main">
         
         <div id="wew">
-            <img src="logo.png" alt="logo"> <br />
+            <img src="../Logo.png" alt="logo"> <br />
             <form method="post" action="login.php">
                 <div class="binput">Login</div>
                 <input type="text" name="login"><br />
