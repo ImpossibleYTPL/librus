@@ -1,5 +1,7 @@
 header{
-  background-color: gray;
+  background-color: #3333FF;
+  height: 100px;
+
 }
 
 #menu {
@@ -94,10 +96,7 @@ header{
  background-color: #993399;
 }
 
-@media (max-width: 800px) and (min-width: 600px) {
+@media (max-width: 800px) {
   
-    #menu{
-
-     background-color: black;
-    }
+   
   }
