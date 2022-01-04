@@ -58,7 +58,7 @@
             waga:
             <input type="number" name="waga" min='1' max='10'>
 
-            <input type="text" name="data" value="." id="data" hidden>
+            <input type="date" name="data" value="" id="data">
 
         </form>
     </div>
