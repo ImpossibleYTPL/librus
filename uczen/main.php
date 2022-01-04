@@ -15,24 +15,25 @@
     ?>
     <div id="baner">
         <div id="logo">
-            <img src="../logo.png" alt="logo" height="50px">
+        <img class="header-img" src ="../Logo.png" alt="Volcano-Logo">
+            &nbsp&nbsp&nbsp&nbsp<h1>Volcano </h1>
         </div>
         <div id="bCenter">
-            okok
+          
         </div>
         <div id="bRight">
-            okok
+          
         </div>
     </div>
     <div id="main">
         
         <div id="wew">
-            <img src="../Logo.png" alt="logo"> <br />
+            <img src="../Logo.png" alt="logo"> <br /><br />
             <form method="post" action="login.php">
-                <div class="binput">Login</div>
+                <div class="binput">Login:</div>
                 <input type="text" name="login"><br />
-                <div class="binput">Hasło</div>
-                <input type="password" name="pass"> <br />
+                <div class="binput">Hasło:</div>
+                <input type="password" name="pass"> <br /><br />
                 <input type="submit" value="ZALOGUJ" id="loginbtn">
                 <p style="text-align: right;"><a href="#">Przypomnij haslo</a></p>
                 <span id="error" style="color: red;">
@@ -40,10 +41,17 @@
                 </span>
             </form>
         </div>
+
     </div>
     <div id="stopka">
         <hr />
-        
+        <ol>Strona została wykonana przez:
+            <li>Rafał Brzeski</li>
+            <li>Bartek Behnke</li>
+            <li>Patryk Kupferschmidt</li>
+            <li>Mateusz Hinc</li>
+        </ol>
+
     </div>
 </body>
 </html>
