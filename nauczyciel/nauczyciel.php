@@ -28,7 +28,7 @@
             <img src="../Logo.png" alt="logo">
         </div>
         <div id="menu">
-            <div class="icon"><a href="oceny.php"><img src="./icons/Oceny.png" alt="Oceny"></a></div>
+            <div class="icon"><a href="dodajoceny.php"><img src="./icons/Oceny.png" alt="Oceny"></a></div>
             <div class="icon"><a href="#"><img src="./icons/Frekwencja.png" alt="Frekwencja"></a></div>
             <div class="icon"><a href="#"><img src="./icons/Wiadomosci.png" alt="Wiadomości"></a></div>
             <div class="icon"><a href="#"><img src="./icons/Ogloszenia.png" alt="Ogłoszenia"></a></div>
