@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volcano - Twój dziennik elektroniczny</title>
     <link rel="stylesheet" href="../Styles/uczen.css?v=1.1">
+    <script>
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
 
+        today = `${yyyy + '-' + mm + '-' + dd}`;
+        console.log(today);
+        document.getElementById('data').value = String(today);
+    </script>
 </head>
 <body>
     <?php
@@ -37,28 +46,21 @@
         </div>
     </div>
     <div id="main">
-        <form id="form" method="get">
-            <select name="klasa" onchange="this.form.submit()">
-                <option>brak</option>
-                <?php
-                    require_once "../start.php";
-
-                    $result = $link->query("SELECT DISTINCT `klasa` FROM `users`");
-                    while($row = $result->fetch_array()){
-                        echo "<option>".$row[0]."</option>";
-                    }
-                ?>
-            </select>
-        </form>
-
         <?php
-            if(isset($_GET['klasa'])) {
-            $result = $link->query("SELECT `imie`, `nazwisko`, `id` FROM `users` WHERE `klasa` = '$_GET[klasa]'");
-            while($row = $result->fetch_array()) {
-                echo "<div class='uczen'>".$row[0]." ".$row[1]."<form method='get' action='dodaj.php'><input type='submit' value='Dodaj ocene'><input name='id' type='hidden' value='".$row[2]."'></form></div>";
+            $result = $link->query("SELECT `imie`, `nazwisko`, `id` FROM `users` WHERE `id` = '$_GET[id]'");
+            while($row = $result->fetch_array()){
+                echo $row[0]." ".$row[1];
             }
-        }
         ?>
+        <form>
+            ocena:
+            <input type="number" name="ocena">
+            waga:
+            <input type="number" name="waga" min='1' max='10'>
+
+            <input type="text" name="data" value="." id="data" hidden>
+
+        </form>
     </div>
     <div id="stopka">
         <hr />
