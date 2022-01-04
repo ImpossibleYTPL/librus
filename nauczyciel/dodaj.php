@@ -47,12 +47,13 @@
     </div>
     <div id="main">
         <?php
+            require_once "../start.php";
             $result = $link->query("SELECT `imie`, `nazwisko`, `id` FROM `users` WHERE `id` = '$_GET[id]'");
             while($row = $result->fetch_array()){
                 echo $row[0]." ".$row[1];
             }
         ?>
-        <form>
+        <form method="post">
             ocena:
             <input type="number" name="ocena">
             waga:
@@ -60,7 +61,20 @@
 
             <input type="date" name="data" value="" id="data">
 
+            <textarea name="komentarz"></textarea>
+
+            <Input type="submit" value="Dodaj ocene"></Input>
+
         </form>
+        <?php
+            if(isset($_POST['ocena'])){
+            $data = strval($_POST['data']);
+            $link->query("INSERT INTO `ocena`(`id`, `ocena`, `waga`, `data`, `komentarz`, `nauczycielID`) VALUES (null, '$_POST[ocena]','$_POST[waga]', '$data','$_POST[komentarz]', '$_SESSION[userID]')");
+            $result = $link->query("SELECT id FROM ocena ORDER BY id DESC LIMIT 1;");
+            $row = $result->fetch_array();
+            $link->query("INSERT INTO `oceny`(`userID`, `OcenaID`) VALUES ('$_GET[id]','$row[0]')");
+            }
+        ?>
     </div>
     <div id="stopka">
         <hr />
