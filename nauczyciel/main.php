@@ -15,13 +15,14 @@
     ?>
     <div id="baner">
         <div id="logo">
-            <img src="../logo.png" alt="logo" height="50px">
+        <img class="header-img" src ="../Logo.png" alt="Volcano-Logo">
+            &nbsp&nbsp&nbsp&nbsp<a href="../index.html"><h1>Volcano </h1></a>
         </div>
         <div id="bCenter">
-            okok
+          
         </div>
         <div id="bRight">
-            okok
+          
         </div>
     </div>
     <div id="main">
@@ -43,6 +44,13 @@
     </div>
     <div id="stopka">
         <hr />
+        
+        <ol>Strona została wykonana przez:
+            <li>Rafał Brzeski</li>
+            <li>Bartek Behnke</li>
+            <li>Patryk Kupferschmidt</li>
+            <li>Mateusz Hinc</li>
+        </ol>
         
     </div>
 </body>
