@@ -16,7 +16,7 @@
     <div id="baner">
         <div id="logo">
         <img class="header-img" src ="../Logo.png" alt="Volcano-Logo">
-            <a href="index.html#">&nbsp&nbsp&nbsp&nbsp<h1>Volcano </h1></a>
+            &nbsp&nbsp&nbsp&nbsp<h1>Volcano </h1>
         </div>
         <div id="bCenter">
           
