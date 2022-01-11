@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 15 Gru 2021, 09:33
+-- Czas generowania: 11 Sty 2022, 12:27
 -- Wersja serwera: 10.4.17-MariaDB
 -- Wersja PHP: 7.4.14
 
@@ -38,6 +38,13 @@ CREATE TABLE `nauczyciel` (
   `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Zrzut danych tabeli `nauczyciel`
+--
+
+INSERT INTO `nauczyciel` (`id`, `login`, `password`, `mail`, `imie`, `nazwisko`, `wychowawca`, `admin`) VALUES
+(1, 0, '63a9f0ea7bb98050796b649e85481845', 'root@wp.pl', 'root', 0, 'root', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -48,7 +55,8 @@ CREATE TABLE `ocena` (
   `id` int(11) NOT NULL,
   `ocena` int(11) NOT NULL,
   `waga` int(11) NOT NULL,
-  `data` date NOT NULL,
+  `data` varchar(10) NOT NULL,
+  `komentarz` text NOT NULL,
   `nauczycielID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -127,6 +135,12 @@ ALTER TABLE `nauczyciel`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeksy dla tabeli `ocena`
+--
+ALTER TABLE `ocena`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeksy dla tabeli `ogloszenia`
 --
 ALTER TABLE `ogloszenia`
@@ -146,6 +160,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT dla tabeli `nauczyciel`
 --
 ALTER TABLE `nauczyciel`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT dla tabeli `ocena`
+--
+ALTER TABLE `ocena`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
