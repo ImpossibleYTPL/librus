@@ -21,7 +21,7 @@
             <a href="#">Ankiety</a>
             <a href="#">Ustawienia</a>
             <a href="#">Pomoc</a>
-            <a href="#">Wyloguj</a>
+            <a href="../wyloguj.php">Wyloguj</a>
         </div>
     </div>
     <div id="baner2">
